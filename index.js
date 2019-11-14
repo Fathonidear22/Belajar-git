@@ -1,24 +1,24 @@
-const express = require (`express`)
+const express = require ('express')
 const app = express()
 
 // for parsing application /x-www-form-urlencoded
 app.use(express.urlencoded({extended: true}))
 
-// app.get(`/`, (req, res) => {
-//     var x, y, z
-//     x = 45
-//     y = 66
-//     z = x / y
-
-//     return res.send(`The value of z is ${z}`)
-
-// })
-
 app.post(`/`, (req, res) => {
-    let email = req.body.email
-     return res.send(`The email value is ${email}`)
+    var x, y, z
+    x = 150
+    y = 89
+    z = x - y
+
+    return res.send(`The value of z is ${z}`)
+
 })
 
-app.listen(5000, () => {
-    console.log(`Example app listening on part 5000`)
+app.get(`/`, (req, res) => {
+    let email = req.body.email
+     return res.send('The email value is '+email)
+})
+
+app.listen(3300, () => {
+    console.log(`Example app listening on part 3300`)
 })
